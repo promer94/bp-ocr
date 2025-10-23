@@ -26,9 +26,8 @@ export async function bpOcr({ url }: { url: string }) {
         role: 'user',
         content: [
           {
-            type: 'file',
-            data: new URL(url),
-            mediaType: 'image/*',
+            type: 'image',
+            image: url,
           },
           { type: 'text', text: prompt },
         ],
